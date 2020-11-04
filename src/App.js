@@ -1,12 +1,13 @@
 import './App.css';
 import ControlledForm from './ControlledForm';
-import Forma from './Forma';
+import UserNameForm from './UserNameForm';
+
 
 function App() {
   return (
     <div>
-    <Forma/>
     <ControlledForm/>
+    <UserNameForm/>
     </div>
   );
 }
