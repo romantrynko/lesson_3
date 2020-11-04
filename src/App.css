@@ -1,0 +1,10 @@
+.shadowOwn {
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.26);
+}
+.center {
+    text-align: center;
+}
+
+form {
+    margin: 20px;
+}

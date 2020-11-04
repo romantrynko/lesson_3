@@ -1,12 +1,13 @@
 import './App.css';
-import ControlledForm from './ControlledForm';
-import UserNameForm from './UserNameForm';
+import UserIdForm from './components/UserIdForm';
+import UserNameForm from './components/UserNameForm';
+
 
 
 function App() {
   return (
-    <div>
-    <ControlledForm/>
+    <div className="d-flex justify-content-center">
+    <UserIdForm/>
     <UserNameForm/>
     </div>
   );

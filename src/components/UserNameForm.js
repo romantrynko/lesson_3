@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { UserService } from './services/service';
+import { UserService } from '../services/service';
 import User from './User';
 
 export default class UserNameForm extends Component {
@@ -25,7 +25,10 @@ export default class UserNameForm extends Component {
         return (
             <div>
                 <form>
-                    <input type="text" onChange={this.onChange}></input>
+                    <h4 class="font-weight-light">
+                        Enter user name or surname:
+                    </h4>
+                    <input class="form-control form-control-lg shadowOwn" type="text" onChange={this.onChange}></input>
                 </form>
                 { 
                     filteredValue && users.filter(user => {

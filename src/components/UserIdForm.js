@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { UserService } from './services/service';
+import { UserService } from '../services/service';
+
 import User from './User'
 
-export default class ControlledForm extends Component {
+export default class UserIdForm extends Component {
 
     state = {
         id: null,
@@ -27,7 +28,7 @@ export default class ControlledForm extends Component {
 
         if (id && regex.test(id)) {
             const user = await this.userService.getUserById(Number(id));
-            console.log(user);
+            // console.log(user);
             this.setState({user})
         };
 
@@ -40,17 +41,16 @@ export default class ControlledForm extends Component {
     
     render() {
         return (
-            <div>
+            <div >
                 <form onSubmit={this.onFormSubmit}>
-                    <input type="text" value={this.state.id} onChange={this.onInputChange}/>
-
-                    <button>Send</button>
-                    </form>
-                    {this.state.user && <User user={this.state.user}/>}
-                
+                <h4 class="font-weight-light">
+                    Enter user id:
+                </h4>
+                    <input class="form-control form-control-lg shadowOwn" type="text" value={this.state.id} onChange={this.onInputChange}/>
+                </form>
+                {this.state.user && <User user={this.state.user}/>}
             </div>
+        
         )
     }
-
-    
 }
